@@ -1,0 +1,44 @@
+body.dark {
+  --first-color-light: hsl(#{$hue}, $sat, 75%);
+  --title-color: hsl(#{$hue}, 4%, 95%);
+  --text-color: hsl(#{$hue}, 4%, 80%);
+  --body-color: hsl(#{$hue}, 8%, 13%);
+  --container-color: hsl(#{$hue}, 8%, 16%);
+  --scroll-bar-color: hsl(#{$hue}, 4%, 32%);
+  --scroll-thumb-color: hsl(#{$hue}, 4%, 24%);
+}
+
+.theme__toggle-container {
+  position: absolute;
+  right: 1.5rem;
+  top: 2.2rem;
+  color: var(--text-color);
+  font-size: 1.8rem;
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+}
+
+.theme-sun,
+.theme-moon {
+  display: none;
+  font-size: 1.2rem;
+}
+
+.change-theme {
+  cursor: pointer;
+}
+
+.dark {
+  .footer {
+    background-color: var(--container-color);
+  }
+
+  .services {
+    &__data {
+      &:hover {
+        background-color: darken($color: $first-color-light, $amount: 75);
+      }
+    }
+  }
+}

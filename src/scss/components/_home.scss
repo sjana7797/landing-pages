@@ -1,0 +1,13 @@
+.home {
+  &__container {
+    row-gap: 3rem;
+  }
+  &__title {
+    font-size: $biggest-font-size;
+    font-weight: $font-bold;
+    margin-bottom: $mb-0-75;
+  }
+  &__description {
+    margin-bottom: $mb-2;
+  }
+}
