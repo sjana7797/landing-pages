@@ -1,4 +1,3 @@
-import "boxicons";
 import "./scss/style.scss";
 import { scrollHeader } from "./utils/backgroundHeader";
 import { scrollActive } from "./utils/scrollSectionActiveList";
