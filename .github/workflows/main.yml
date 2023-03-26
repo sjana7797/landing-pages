@@ -2,8 +2,8 @@ name: Deploy
 
 on:
   push:
-    tags:
-      - "v*"
+    branches:
+      - delivery
 
 jobs:
   test_build:
