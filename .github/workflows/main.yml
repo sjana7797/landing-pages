@@ -1,0 +1,25 @@
+name: Deploy
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  test_build:
+    name: Testing the Build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [10]
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Install Pnpm
+        run: npm install pnpm@latest -g
+      - name: Install dependencies
+        run: pnpm install
+      - name: Run build
+        run: pnpm build
